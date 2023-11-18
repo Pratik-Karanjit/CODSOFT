@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;      /*ensures that the specified width includes padding and border.*/
+    overflow: hidden;           /*hides any content that overflows the container, preventing it from affecting the layout of surrounding elements and eliminating the need for scrollbars.*/
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;  /*top and bottom is 30 and left right 0*/
+}
+
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    flex:1; /*its a shorthand property that sets three individual Flex properties: flex-grow, flex-shrink, and flex-basis. In this case, it's shorthand for flex: 1 1 0;. */
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;       /* removes default markers*/
+    display: inline-block;  /*makes the list horizontally aligned*/
+    margin-right: 30px;     /*Provides margin between list elements*/
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover{
+    color: #ff5ea2;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;   /*Positions the flex items with maximum space between them along the main axis. */
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1{
+    flex-basis:40%;  /*Sets the initial size of the .col-1 to be 40% of the container's width*/
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2{
+    font-size:  54px;
+}
+
+.col-1 h3{
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+.col-1 p{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+.col-1 h4{
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.hero-button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+.hero-button img{
+    width: 30px;
+    display: none;     /*Only display it when hovered */
+}
+
+.hero-button:hover img{     /*To display the arrow image */
+    display: block;
+}
+
+.hero-button:hover{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-1::after{
+    content:'';       /*syntax for displaying no text here */
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(to right, #ff469f, #ff6062);     
+    position: absolute;             /*place it absolutely left and top and not any where else*/
+    left: -40px;              /*-40px far from left*/
+    top: 8px;               /*8px from top*/
+}
+
+.col-2{
+    position:relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 .controller{
+    width:90%;
+}
+
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2, #ff575a);          /*Give that gradient look*/
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;                    /*3d look*/
+    transform: translateX(150px);
+}
+
+.add-btn img{
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+.add-btn{
+    text-align:center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-links img{
+    height: 13px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.social-links{
+    text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    nav ul{
+        width: 100%;
+        background:linear-gradient(#ff54a2, #ff575a); 
+        position: absolute;
+        top: 75px;
+        right: 0;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .row{
+        flex-direction: column-reverse;  /*indicates that the main axis should be vertical, and the flex container's items should be laid out in a column. */
+        margin: 70px 0;
+    }
+    .col-2{
+        flex-basis:100%;
+        margin-bottom: 50px;
+    }
+    .col-2 .controller{
+        width: 77%;
+    }
+    .color-box{
+        transform: translateX(75px);
+    }
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-1 h2{
+        font-size: 35px;
+    }
+    .col-1 h3{
+        font-size: 15px;
+    }
+}
+
+
+
+.container2{
+    width: 100%;
+    background-color: #faf6f6;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;   
+    overflow: hidden;      
+}
+
+
+.row2{
+    display: flex;
+    justify-content: space-around;   /*Positions the flex items with maximum space between them along the main axis. */
+    align-items: center;
+    margin: 100px 0;
+}
+
+.colu-1, .colu-2, .colu-3{      /*Combining all together*/
+    text-align: center;
+    width: 350px;
+    background-color: white;
+    border: 1px solid #ededed;
+    border-radius: 7px;
+    height: 460px;
+}     
+
+.services{
+    font: bold 25px arial;        /*Services heading*/
+    margin: 100px 0;
+}
+
+.producton{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+
+.footer {
+  padding: 10px 10px;
+  color: bisque;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.footer div {
+  text-align: center;
+}
+
+.col2 {
+  flex-grow: 2;
+}
+
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.col1 a {
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+
+form button {
+  background: transparent;
+  border: 2px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.socialicons {
+  margin-top: 20px;
+}
+
+.socialicons i {
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .row2{
+        flex-direction: column-reverse; 
+        margin: 70px 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center; 
+    }
+
+    .footer div {
+        margin-top: 20px; 
+    }
+
+    form input {
+        width: 100%; 
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+.row2 {
+flex-direction: column-reverse;
+margin: 70px 0;
+}
+
+.colu-1,.colu-2,.colu-3 {
+width: 100%;
+margin-bottom: 20px;
+}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+.row2 {
+margin: 80px 0;
+}
+.colu-1,.colu-2,.colu-3 {
+width: 48%; 
+margin-bottom: 20px;
+}
+}
