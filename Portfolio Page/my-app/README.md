@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+Project Name: Portfolio Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project has multiple features like scrolling through the navigation bar, scroll to top button, download CV in local system, multiple div to highlight projects and achievements.
 
-## Available Scripts
+Table of Contents
+1. Prerequisites
+2. Getting Started
+3. Configuration
+4. Usage
 
-In the project directory, you can run:
 
-### `npm start`
+1. Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Node.js
+Git (for cloning the repository)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+2. Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/Pratik-Karanjit/CODSOFT.git
 
-### `npm run build`
+To run frontend code:
+In terminal write these:
+cd CODSOFT
+cd Portfolio Page
+cd my-app
+npm install 
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before running backend code:
+DO these:
+Configuration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run MongoDB, create a .env file inside of backend folder and paste these:
 
-### `npm run eject`
+SECRET_KEY = portfolio
+PORT = 8000
+FROM_EMAIL=your_email@gmail.com
+FROM_PASSWORD=your_app_password
+EMAIL_HOST=smtp.gmail.com
+BASE_URL = http://localhost:3000
+If you switch tabs and .env file shows black lines, click on toggle auto-cloaking.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run backend code:
+In terminal write these:
+cd Portfolio Page
+cd backend 
+npm install express
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To set up app password, do the following:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ - Go to your Google Account settings.
+   - In the "Security" section, find the "Signing in to Google" option.
+   - Click on "App passwords" (you may need to enable 2-Step Verification if not already done).
+   - Select "App" and "Other (custom name)".
+   - Enter a name for your app (e.g., "My Portfolio Page.").
+   - Google will generate an App Password. Use this password in your `.env` file.
+   - Restart vs code as the password often runs only after restarting.
 
-## Learn More
+# It is important to create app password for acquiring mail verification and accessing other features in this project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+run command: npm start
 
-### Code Splitting
+You will be directed to Portfolio page. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
